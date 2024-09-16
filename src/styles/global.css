@@ -1,5 +1,15 @@
 :root {
-    --navColor: #40916C;
-    --bgColor: #D8F3DC;
+    --navColor: #00684a;
+    --bgColor: #fffafa;
     --divColor: #52B788;
+}
+
+* {
+    font-size: 62.5%;
+    font-family: Euclid-C;
+}
+
+@font-face {
+    font-family: Euclid-C;
+    src: url(/public/euclid-circular-a/Euclid\ Circular\ A\ Light.ttf);
 }
