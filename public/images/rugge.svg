@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 738.13 271.82">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #231f20;
+      }
+
+      .cls-2 {
+        font-family: EuclidCircularA-Regular, 'Euclid Circular A';
+        font-size: 241.26px;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(155.72 206.92)"><tspan x="0" y="0">ugge</tspan></text>
+  <g>
+    <polygon class="cls-1" points="80.29 83.25 67.66 70.63 0 138.29 .44 138.73 0 139.17 67.66 206.83 80.29 194.21 24.81 138.73 80.29 83.25"/>
+    <path class="cls-1" d="M86.94,139.36c31.14-7.37,54.31-35.32,54.31-68.71C141.26,31.63,109.63,0,70.61,0S.83,30.8,0,69.09h16.64c.82-29.11,24.66-52.45,53.97-52.45s54.01,24.18,54.01,54.01-23.33,53.12-52.42,53.97h0s0,0,0,0c0,0-.02,0-.03,0v.03l-12.59,12.59,69.43,69.43,12.63-12.63-54.68-54.68Z"/>
+  </g>
+</svg>
