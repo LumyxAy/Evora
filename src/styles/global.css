@@ -1,7 +1,8 @@
 :root {
     --navColor: #00684a;
-    --bgColor: #fffafa;
-    --divColor: #52B788;
+    --mainColor: #fffafa;
+    --divColor: #379c6d;
+    --redColor: #dd2525;
 }
 
 * {
