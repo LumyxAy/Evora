@@ -8,7 +8,18 @@ import Navbar from "../components/Navbar.astro";
   <Navbar />
 
   <main>
-    <canvas id="myChart"> </canvas>
+    <div class="portfolio">
+
+      
+
+      <div class="stats">
+        <div class="portfolio-title">
+          
+        </div>
+
+        <canvas id="myChart" />
+      </div>
+    </div>
   </main>
 
 
@@ -17,19 +28,42 @@ import Navbar from "../components/Navbar.astro";
 
 <style>
   main{
-    #myChart {
-      max-width: 40vw;
-      max-height: 40vh;
-      min-width: 40vw;
-      min-height: 40vh;
 
-      
+    .portfolio {
+      width: 35vw;
+      height: 90vh;
+      padding: 20px;
+      margin: 2.5vh 0 0 2.5vh;
+      border-radius: 60px;
+      background-color: var(--divColor);
+
+      display: flex;
+      justify-content: center;
+
+      .stats {
+        #myChart {
+          max-width: 30vw;
+          max-height: 40vh;
+          min-width: 30vw;
+          min-height: 40vh;
+          
+        }
+
+      }
     }
   }
   
 </style>
 
 <script>
+  const gr1 = "#1B4332";
+  const gr2 = "#00684a";
+  const gr3 = "#40916C";
+  const gr4 = "#52B788";
+  const gr5 = "#74C69D";
+  const gr6 = "#95D5B2";
+  const gr7 = "#D8F3DC"
+
   import Chart from "chart.js/auto";
 
   const ctx = document.getElementById(`myChart`) as HTMLCanvasElement;
@@ -40,18 +74,26 @@ import Navbar from "../components/Navbar.astro";
       labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
       datasets: [
         {
+          backgroundColor: [gr1, gr2, gr3, gr4, gr5, gr6, gr7,],
           label: "# of Votes",
           data: [12, 19, 3, 5, 2, 3],
           borderWidth: 1,
+          
         },
       ],
     },
     options: {
+      cutout: '70%',
+
       plugins: {
+        legend: {
+          display: false,
+        },
         tooltip: {
-          enabled: false,
+          // enabled: false,
         },
       },
+
       scales: {
         x: {
           display: false,
@@ -63,6 +105,23 @@ import Navbar from "../components/Navbar.astro";
         },
       },
     },
+
+    plugins: [{
+      beforeDraw: (chart) => {
+        const ctx = chart.ctx;
+        const x = chart.chartArea.left + (chart.chartArea.right - chart.chartArea.left) / 2;
+        const y = chart.chartArea.top + (chart.chartArea.bottom - chart.chartArea.top) / 2;
+
+        ctx.save();
+        ctx.font = 'bold 20px Arial'; // Font settings
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = 'black'; // Text color
+        ctx.fillText('', x, y); // Replace 'Center Text' with your desired text
+        ctx.restore();
+      },
+      id: ""
+    }]
   });
 </script>
 
