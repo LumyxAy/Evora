@@ -1,7 +1,7 @@
 :root {
     --navColor: rgba(0, 104, 74, 1);
     --mainColor: rgba(255, 250, 250, 1);
-    --divColor: rgba(245, 245, 245, 1);
+    --divColor: rgba(250, 250, 250, 1);
     --highlightColor: rgba(64, 145, 108, 1) ;
     --redColor: rgba(221, 37, 37, 1);
 
@@ -21,4 +21,8 @@
 @font-face {
     font-family: Euclid-C;
     src: url(/public/fonts/euclid-circular-a/Euclid\ Circular\ A\ Light.ttf);
+}
+@font-face {
+    font-family: Inter;
+    src: url(/public/fonts/inter/Inter-SemiBold.otf);
 }
